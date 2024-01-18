@@ -1,10 +1,19 @@
-Прогресс выполнения домашних заданий:
-- [Урок 1. Промисы и обёртки](https://docs.google.com/document/d/168uWmUBMMh6ZpZNGwafYAgRl_J_9kulWGKgiD585CSk/edit) [**100%**]
-- [Урок 2. Дескрипторы свойств объектов](https://docs.google.com/document/d/1Dz4shUVjQDAoWdfxrPloaRrmnMDYdpX8_tZYQAY4pwA/edit) [**0%**]
-- [Урок 3. Итераторы и генераторы](https://docs.google.com/document/d/1lR3dDL1jZM1auTnOF-1kS7_yNST2y6298OfXWSRMSwk/edit) [**0%**]
-- [Урок 4. Оптимизация рендеринга](https://docs.google.com/document/d/1CkH8v4CyZpvJ35hNbTQwZGlbFvp5d3vp5prxpD3EH90/edit) [**0%**]
-- [Урок 5. Хуки](https://docs.google.com/document/d/1u2jrBslRIKgyvrsjHoKmhfJ4948LJPigRQVmjljd75I/edit) [**0%**]
-- [Урок 6. Паттерны](https://docs.google.com/document/d/1y_DAXdD5n8pMeG5JkXda0czWHt2y1HXqxZ-NACauzcY/edit) [**0%**]
-- [Урок 7. MobX](https://docs.google.com/document/d/1tvLvWqRWC6AouF0LZEoFn3zS8GgoA8k48B55QlW8Onk/edit) [**0%**]
-- [Урок 8. Сборщики](https://docs.google.com/document/d/1sn7F9Ir83RRzCh2QVZoAiBseH7dJdLCyh1fEFR2HQGo/edit) [**0%**]
-- [Урок 9. Тестирование](https://docs.google.com/document/d/1WL_3tQ3lYVF7TWJfTTC4yhdg5cAOUE0jtg3YjroX_h8/edit) [**0%**]
+## Задание №6. Паттерны
+
+### Задание 6.1
+Используя Context реализовать "Блендер" различных сущностей.<br />
+Реализовать общий компонент и 2+ дочерних компонента с выбором элементов и 1+ компонента с отображением результата "комбинирования" выбранных элементов их первой группы<br />
+<p>Пример: Комбинирование красок, животных, слов, чисел и т.д.</p>
+
+Компоненты ввода и вывода обернуть в компоненты высшего порядка с общими элементами (стилями)
+
+Пример реализации: https://pokemon.alexonsager.net
+
+### Задание 6.2
+Используя рекурсивные компоненты, расширить проект из задания 1.<br/>
+Реализовать группировку элементов с глубиной, минимум, 1 уровень.
+
+Если это числа - можно группировать по четным и не четным, дробным и целым, положительным и отрицательным (0 - положительное)
+Если цвета - разделить на тёплые и холодные, светлые и тёмные, или разгруппировать на преемственность RGB составляющих и их интенсивность
+
+Дополнительное задание (не обязательно): Реализовать отображение дерева конечного результата, из каких ветвей дерева он был составлен и родителей этих ветвей
