@@ -1,7 +1,7 @@
 Прогресс выполнения домашних заданий:
 - [Урок 1. Промисы и обёртки](https://docs.google.com/document/d/168uWmUBMMh6ZpZNGwafYAgRl_J_9kulWGKgiD585CSk/edit) [**100%**]
-- [Урок 2. Дескрипторы свойств объектов](https://docs.google.com/document/d/1Dz4shUVjQDAoWdfxrPloaRrmnMDYdpX8_tZYQAY4pwA/edit) [**0%**]
-- [Урок 3. Итераторы и генераторы](https://docs.google.com/document/d/1lR3dDL1jZM1auTnOF-1kS7_yNST2y6298OfXWSRMSwk/edit) [**0%**]
+- [Урок 2. Дескрипторы свойств объектов](https://docs.google.com/document/d/1Dz4shUVjQDAoWdfxrPloaRrmnMDYdpX8_tZYQAY4pwA/edit) [**100%**]
+- [Урок 3. Итераторы и генераторы](https://docs.google.com/document/d/1lR3dDL1jZM1auTnOF-1kS7_yNST2y6298OfXWSRMSwk/edit) [**100%**]
 - [Урок 4. Оптимизация рендеринга](https://docs.google.com/document/d/1CkH8v4CyZpvJ35hNbTQwZGlbFvp5d3vp5prxpD3EH90/edit) [**0%**]
 - [Урок 5. Хуки](https://docs.google.com/document/d/1u2jrBslRIKgyvrsjHoKmhfJ4948LJPigRQVmjljd75I/edit) [**0%**]
 - [Урок 6. Паттерны](https://docs.google.com/document/d/1y_DAXdD5n8pMeG5JkXda0czWHt2y1HXqxZ-NACauzcY/edit) [**0%**]
