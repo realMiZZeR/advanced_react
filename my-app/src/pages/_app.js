@@ -1,12 +1,5 @@
-import React from "react";
-
-const SimpleComponent = ({ number, componentRerenderedTimes }) => {
-  componentRerenderedTimes.current++;
-
-  const onPress = () => alert(number);
-
-  return <div onClick={() => onPress()}>Number: {number}</div>;
-};
+import React from 'react';
+import {SimpleComponent} from '@/components/SimpleComponent';
 
 export default function App() {
   const componentRerenderedTimes = React.useRef(0);
@@ -16,24 +9,23 @@ export default function App() {
       .map((item, index) => ({ number: item.number, id: String(index + 1) }))
   );
 
-  const random = () =>
+  const randomize = React.useCallback(() => {
     setData(
-      data.map(({ id }) => ({ number: Math.floor(1 + Math.random() * 10), id }))
-    );
+      data.map(({ id }) => ({ number: Math.floor(1 + Math.random() * 10), id })));
+  }, []);
+
+  const onClickAddToTop = React.useCallback(() => {
+    setData(data => [{ number: 0, id: Math.random() }, ...data])
+  }, []);
 
   return (
     <div>
       <div>Was rendered: {componentRerenderedTimes.current}</div>
-      <button onClick={() => random()}>random</button>
-      <button
-        onClick={() =>
-          setData(data => [{ number: 0, id: Math.random() }, ...data])
-        }
-      >
-        add to top
-      </button>
+      <button onClick={randomize}>random</button>
+      <button onClick={onClickAddToTop}>add to top</button>
       {data.map(item => (
         <SimpleComponent
+          key={item.id}
           number={item.number}
           componentRerenderedTimes={componentRerenderedTimes}
         />
