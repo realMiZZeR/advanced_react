@@ -22,7 +22,7 @@ export const SelectInput = ({data, style, onChange}: ISelectInput) => {
 
   return (
     <select value={value} onChange={onSelectChange} style={style}>
-      <option disabled selected></option>
+      <option disabled value={''}></option>
       {renderOptions()}
     </select>
   )
