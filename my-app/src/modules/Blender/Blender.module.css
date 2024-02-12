@@ -1,3 +1,7 @@
+/**
+Стили для компонента, который смешивает сущности.
+ */
+
 .container {
     display: flex;
     justify-content: center;

@@ -1,34 +1,40 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {BlendResult} from '@/modules/Blender/components/BlendResult';
 import styles from '@/modules/Blender/Blender.module.css';
-import {BlenderContext, IBlenderContext} from '@/modules/Blender/BlenderContext';
 import {BlenderInput} from '@/modules/Blender/components/BlenderInput';
 import {testBlenderData} from '@/modules/Blender/constants/testBlenderData';
 
+// Количество полей выбора для слияний.
+const inputs = [
+  {
+    id: 0,
+    data: testBlenderData,
+  },
+  {
+    id: 1,
+    data: testBlenderData,
+  },
+  {
+    id: 2,
+    data: testBlenderData,
+  },
+  {
+    id: 3,
+    data: testBlenderData,
+  },
+]
+
+// Компонент, позволяющий смешивать сущности.
 export const Blender = () => {
 
-  const [values, setValues] = useState<string[]>([]);
-
-  // Сделал так для теста, два BlenderInput - два initialValue.
-  useEffect(() => {
-    const initialValue = testBlenderData[0].options[0];
-    setValues([initialValue, initialValue]);
-  }, []);
-
-  const context: IBlenderContext = {
-    values: values,
-    setValues: setValues,
-  };
-
   return (
-    <BlenderContext.Provider value={context}>
       <div className={styles.container}>
         <BlendResult />
         <div className={styles.inputList}>
-          <BlenderInput id={0} data={testBlenderData} />
-          <BlenderInput id={1} data={testBlenderData} />
+          {inputs.map(input => (
+            <BlenderInput key={input.id} id={input.id} data={input.data} />
+          ))}
         </div>
       </div>
-    </BlenderContext.Provider>
   )
 }

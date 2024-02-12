@@ -1,23 +1,13 @@
-import {useEffect, useState} from 'react';
-import {useBlenderContext} from '@/modules/Blender/BlenderContext';
+import {observer} from 'mobx-react';
+import {useRootStore} from '@/core/stores/RootStore';
 
-// Результат слияния двух чисел.
-export const BlendResult = () => {
-  const {values} = useBlenderContext();
-  const [result, setResult] = useState('?');
-
-  useEffect(() => {
-    if (values.length === 0) {
-      setResult('?');
-      return;
-    }
-
-    setResult(values.join(''));
-  }, [values]);
+// Результат слияния сущностей.
+export const BlendResult = observer(() => {
+  const {blender} = useRootStore();
 
   return (
     <div>
-      <h1>{result}</h1>
+      <h1>{blender.result}</h1>
     </div>
   )
-}
+});

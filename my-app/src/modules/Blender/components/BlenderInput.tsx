@@ -1,7 +1,8 @@
 import {stylizeInput} from '@/hoc/stylizeInput';
 import {SelectInput} from '@/modules/SelectInput/SelectInput';
-import {useBlenderContext} from '@/modules/Blender/BlenderContext';
 import {ISelectInputGroup} from '@/modules/SelectInput/interfaces/ISelectInputGroup';
+import {observer} from 'mobx-react';
+import {useRootStore} from '@/core/stores/RootStore';
 
 interface IBlenderInput {
   id: number;
@@ -11,12 +12,13 @@ interface IBlenderInput {
 const StylizedSelectInput = stylizeInput(SelectInput);
 
 // Инпут, хранящий логику для блендера.
-export const BlenderInput = ({id, data}: IBlenderInput) => {
-  const {setValues} = useBlenderContext();
+export const BlenderInput = observer(({id, data}: IBlenderInput) => {
+
+  const {blender} = useRootStore();
 
   const onChange = (value: string) => {
-    setValues(prev => prev.map((item, index) => index === id ? value : item));
+    blender.setValues(id, value)
   }
 
   return <StylizedSelectInput data={data} onChange={onChange} />
-}
+})
