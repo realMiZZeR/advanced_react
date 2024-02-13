@@ -1,7 +1,9 @@
+import './styles.scss';
 import React from 'react';
-import ReactDOM  from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
-const root = document.getElementById("root");
 const Hello = () => <h1>Hello!</h1>
 
-ReactDOM.render(<Hello />, root)
+const container = document.getElementById("container");
+const root = createRoot(container);
+root.render(<Hello />);
