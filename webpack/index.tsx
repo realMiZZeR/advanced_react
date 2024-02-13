@@ -2,8 +2,11 @@ import './styles.scss';
 import React from 'react';
 import {createRoot} from 'react-dom/client';
 
-const Hello = () => <h1>Hello!</h1>
+interface TitleProps {
+  text: string;
+}
+const Title = ({text}: TitleProps) => <h1>{text}</h1>
 
 const container = document.getElementById("container");
 const root = createRoot(container);
-root.render(<Hello />);
+root.render(<Title text={'Hello, Webpack!'} />);
