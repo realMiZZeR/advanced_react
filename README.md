@@ -7,4 +7,4 @@
 - [Урок 6. Паттерны](https://docs.google.com/document/d/1y_DAXdD5n8pMeG5JkXda0czWHt2y1HXqxZ-NACauzcY/edit) [**100%**]
 - [Урок 7. MobX](https://docs.google.com/document/d/1tvLvWqRWC6AouF0LZEoFn3zS8GgoA8k48B55QlW8Onk/edit) [**100%**]
 - [Урок 8. Сборщики](https://docs.google.com/document/d/1sn7F9Ir83RRzCh2QVZoAiBseH7dJdLCyh1fEFR2HQGo/edit) [**100%**]
-- [Урок 9. Тестирование](https://docs.google.com/document/d/1WL_3tQ3lYVF7TWJfTTC4yhdg5cAOUE0jtg3YjroX_h8/edit) [**0%**]
+- [Урок 9. Тестирование](https://docs.google.com/document/d/1WL_3tQ3lYVF7TWJfTTC4yhdg5cAOUE0jtg3YjroX_h8/edit) [**80%**]
